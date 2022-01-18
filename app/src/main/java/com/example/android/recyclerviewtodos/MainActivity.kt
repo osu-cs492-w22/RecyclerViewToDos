@@ -12,18 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val todoList = mutableListOf<String>()
+        val toDoList = mutableListOf<String>()
 
-        val todoListTV = findViewById<TextView>(R.id.tv_todo_list)
-        val todoEntryET = findViewById<EditText>(R.id.et_todo_entry)
-        val addTodoBtn = findViewById<Button>(R.id.btn_add_todo)
+        val toDoListTV = findViewById<TextView>(R.id.tv_todo_list)
+        val toDoEntryET = findViewById<EditText>(R.id.et_todo_entry)
+        val addToDoBtn = findViewById<Button>(R.id.btn_add_todo)
 
-        addTodoBtn.setOnClickListener {
-            val newTodo = todoEntryET.text.toString()
-            if (!TextUtils.isEmpty(newTodo)) {
-                todoList.add(0, newTodo)
-                todoListTV.text = todoList.joinToString(separator = "\n\n☐  ", prefix = "☐  ")
-                todoEntryET.setText("")
+        addToDoBtn.setOnClickListener {
+            val newToDo = toDoEntryET.text.toString()
+            if (!TextUtils.isEmpty(newToDo)) {
+                toDoList.add(0, newToDo)
+                toDoListTV.text = toDoList.joinToString(separator = "\n\n☐  ", prefix = "☐  ")
+                toDoEntryET.setText("")
             }
         }
     }

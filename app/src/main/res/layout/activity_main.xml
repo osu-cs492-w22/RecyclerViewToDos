@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:hint="Enter a TODO" />
+        android:hint="Enter a To-Do" />
 
     <Button
         android:id="@+id/btn_add_todo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add TODO" />
+        android:text="Add To-Do" />
 
     <ScrollView
         android:layout_width="match_parent"
