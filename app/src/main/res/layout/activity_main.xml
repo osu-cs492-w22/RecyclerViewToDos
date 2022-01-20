@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="8dp"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content">
+    <LinearLayout
 
-    <EditText
-        android:id="@+id/et_todo_entry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:hint="Enter a To-Do" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_add_todo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add To-Do" />
+        <EditText
+            android:id="@+id/et_todo_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:hint="Enter a To-Do" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_todo_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_add_todo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add To-Do" />
 
-</LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_todo_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

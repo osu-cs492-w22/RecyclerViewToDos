@@ -12,9 +12,15 @@ class ToDoAdapter : RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
 
     override fun getItemCount() = this.toDos.size
 
-    fun addToDo(toDo: ToDo) {
-        this.toDos.add(0, toDo)
-        this.notifyItemInserted(0)
+    fun addToDo(toDo: ToDo, position: Int = 0) {
+        this.toDos.add(position, toDo)
+        this.notifyItemInserted(position)
+    }
+
+    fun deleteToDoAt(position: Int): ToDo {
+        val toDo = this.toDos.removeAt(position)
+        this.notifyItemRemoved(position)
+        return toDo
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
